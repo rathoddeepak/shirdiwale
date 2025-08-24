@@ -66,7 +66,7 @@ const VehicleCards = () => {
           `}
         >
           {/* Vehicle Image Container */}
-          <div className="w-[24%] h-30 flex items-center justify-center flex-shrink-0">
+          <div className="w-[200px] md:w-[24%] h-24 md:h-30 flex items-center justify-center flex-shrink-0">
             <img
               src={vehicle.image}
               alt={vehicle.title}
@@ -75,14 +75,14 @@ const VehicleCards = () => {
           </div>
 
           {/* Vehicle Info */}
-          <div className="w-[30%] items-center flex flex-col">
+          <div className="w-full md:w-[30%] items-center md:items-start flex flex-col">
             {/* Header */}
             <div className="flex justify-between items-start mb-4">
               <div className="vehicle-type">
-                <h3 className="text-white font-bold text-lg tracking-widest uppercase mb-1 drop-shadow-lg">
+                <h3 className="text-white font-bold text-base md:text-lg tracking-widest uppercase mb-1 drop-shadow-lg text-center md:text-left">
                   {vehicle.title}
                 </h3>
-                <h4 className="text-white/75 text-base font-normal">
+                <h4 className="text-white/75 text-sm md:text-base font-normal text-center md:text-left">
                   {vehicle.subtitle}
                 </h4>
               </div>
@@ -90,11 +90,11 @@ const VehicleCards = () => {
           </div>
 
           {/* Description */}
-          <div className="flex-grow flex flex-col w-[30%]">
-            <div className="text-white font-semibold text-lg drop-shadow-lg">
+          <div className="flex-grow flex flex-col w-full md:w-[30%]">
+            <div className="text-white font-semibold text-base md:text-lg drop-shadow-lg text-center md:text-left">
               Description
             </div>
-            <div className="text-white/75 text-base leading-relaxed font-normal">
+            <div className="text-white/75 text-sm md:text-base leading-relaxed font-normal text-center md:text-left">
               {vehicle.description}
             </div>
           </div>
@@ -106,15 +106,15 @@ const VehicleCards = () => {
 
 export const CarTypes = () => {
   return (
-    <div className="w-4/5 flex flex-col self-center items-center">
+    <div className="w-full px-6 md:w-4/5 flex flex-col self-center items-center">
       <div className="text-center space-y-4">
-        <div className="font-medium text-xl text-muted-foreground">
+        <div className="font-medium text-lg md:text-xl text-muted-foreground">
           Available Car Types
         </div>
-        <div className="bg-gradient-to-r from-muted-foreground to-[#505050] bg-clip-text text-transparent font-semibold text-5xl">
+        <div className="bg-gradient-to-r from-muted-foreground to-[#505050] bg-clip-text text-transparent font-semibold text-3xl md:text-5xl">
           Find perfect ride for your journey
         </div>
-        <div className="text-base text-muted-foreground">
+        <div className="text-sm md:text-base text-muted-foreground">
           All cars come with AC, and are regularly sanitized.
         </div>
       </div>

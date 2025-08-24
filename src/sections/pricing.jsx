@@ -74,7 +74,7 @@ function Table() {
   });
 
   return (
-    <div className="grid grid-cols-5 gap-0 rounded-lg overflow-hidden shadow-2xl">
+    <div className="hidden md:grid grid-cols-5 gap-0 rounded-lg overflow-hidden shadow-2xl">
       {/* Left Column - Plan Details */}
       <div>
         <div className="p-6 h-36 border-b border-border">
@@ -151,18 +151,103 @@ function Table() {
   );
 }
 
+// Mobile Pricing Cards Component
+function MobilePricingCards() {
+  const [pricingData] = useState({
+    plans: [
+      {
+        id: "hatchback",
+        name: "Hatchback",
+        description: "Swift (CNG, DIESEL)",
+        prices: {
+          "12hours": 999,
+          "24hours": 1299,
+        },
+      },
+      {
+        id: "sedan",
+        name: "Sedan",
+        description: "Dzire (CNG, DIESEL)",
+        recommended: true,
+        prices: {
+          "12hours": 1199,
+          "24hours": 1799,
+        },
+      },
+      {
+        id: "suv",
+        name: "SUV",
+        description: "Ertiga- (CNG, Diesel, Petrol)",
+        prices: {
+          "12hours": 1499,
+          "24hours": 2499,
+        },
+      },
+      {
+        id: "luxury",
+        name: "Luxury",
+        description: "Innova Crysta (Diesel)",
+        prices: {
+          "12hours": 1999,
+          "24hours": 2999,
+        },
+      },
+    ],
+  });
+
+  return (
+    <div className="grid grid-cols-1 gap-4 md:hidden">
+      {pricingData.plans.map((plan) => (
+        <div
+          key={plan.id}
+          className={`rounded-2xl border ${plan.recommended ? 'border-indigo-500 bg-gradient-to-b from-indigo-900/20 to-transparent' : 'border-border'} p-6 relative`}
+        >
+          {plan.recommended && (
+            <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+              <span className="bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                RECOMMENDED
+              </span>
+            </div>
+          )}
+          <h3 className="text-xl font-semibold mb-1">{plan.name}</h3>
+          <p className="text-sm text-muted-foreground mb-4">{plan.description}</p>
+          
+          <div className="space-y-3">
+            <div className="flex justify-between items-center p-3 bg-background/50 rounded-lg">
+              <span className="text-sm font-medium">12 Hours Plan</span>
+              <span className="text-lg font-bold">₹{plan.prices["12hours"]}</span>
+            </div>
+            <div className="flex justify-between items-center p-3 bg-background/50 rounded-lg">
+              <span className="text-sm font-medium">24 Hours Plan</span>
+              <span className="text-lg font-bold">₹{plan.prices["24hours"]}</span>
+            </div>
+          </div>
+          
+          <div className="mt-4 pt-4 border-t border-border space-y-2">
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <span className="text-green-500">✓</span>
+              <span>All classes across 11 categories</span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export const Pricing = () => {
   return (
-    <div className="w-4/5 flex flex-col self-center items-center">
+    <div className="w-full px-6 md:w-4/5 flex flex-col self-center items-center">
       <div className="text-center space-y-4 mb-10">
-        <div className="bg-gradient-to-r from-muted-foreground to-[#505050] bg-clip-text text-transparent font-semibold text-5xl">
+        <div className="bg-gradient-to-r from-muted-foreground to-[#505050] bg-clip-text text-transparent font-semibold text-3xl md:text-5xl">
           Pricing
         </div>
-        <div className="text-base text-muted-foreground">
+        <div className="text-sm md:text-base text-muted-foreground">
           Starting at just ₹999 for 12 Hrs!
         </div>
       </div>
       <Table />
+      <MobilePricingCards />
     </div>
   );
 };
