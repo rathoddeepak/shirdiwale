@@ -27,7 +27,7 @@ export const HeroSection = () => {
 
         {/* Subtitle */}
         <p className="text-base md:text-lg text-muted-foreground">
-          No Driver No waiting just ride
+          No Driver. No Waiting. Just Ride.
         </p>
 
         {/* CTA Button */}

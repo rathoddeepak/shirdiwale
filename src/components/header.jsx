@@ -1,5 +1,6 @@
 import { useState } from "preact/hooks";
 import MovingBorderCover from "./moving-border-cover";
+import appLogo from "../assets/car_shirdi_log.png";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,8 +19,11 @@ export const Header = () => {
   return (
     <>
       <nav className="flex justify-between items-center p-[4px] backdrop-blur-sm fixed top-4 md:top-8 w-11/12 md:w-4/5 self-center z-50 rounded-full border border-border bg-[#121212]">
-        <div className="text-lg md:text-xl font-medium ml-4">Shirdi Wale</div>
-
+                <img
+  src={appLogo}   // your image path
+  alt="Shirdi Wale"
+  className="ml-4 h-7 md:h-8 object-contain"
+/>
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">
           {navLinks.map((link) => (
