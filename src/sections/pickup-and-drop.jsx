@@ -19,7 +19,7 @@ export const PickupAndDrop = () => {
           </div>
           <div className="flex items-center space-x-3 text-sm md:text-base text-muted-foreground">
             <span className="text-yellow-300">✓</span>
-            <span>Bus Stand</span>
+            <span>Shirdi Bus Stand</span>
           </div>
           <div className="flex items-center space-x-3 text-sm md:text-base text-muted-foreground">
             <span className="text-yellow-300">✓</span>
@@ -27,11 +27,11 @@ export const PickupAndDrop = () => {
           </div>
           <div className="flex items-center space-x-3 text-sm md:text-base text-muted-foreground">
             <span className="text-yellow-300">✓</span>
-            <span>Shirdi Pickup</span>
+            <span>Shirdi Airport</span>
           </div>
           <div className="flex items-center space-x-3 text-sm md:text-base text-muted-foreground">
             <span className="text-yellow-300">✓</span>
-            <span>Any Pickup within city</span>
+            <span>Anywhere in Shirdi or nearby places</span>
           </div>
         </div>
       </div>
