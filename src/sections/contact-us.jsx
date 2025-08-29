@@ -14,17 +14,17 @@ export function ContactUs() {
         <div className="space-y-3 md:space-y-2 mt-4 text-gray-300 text-sm md:text-base">
           <p className="flex flex-col md:flex-row justify-center items-center gap-1 md:gap-3">
             {/* <FaMapMarkerAlt className="text-yellow-400" />*/}
-            Office Address: 2nd Floor Sai Complex, Near Dwarkamai, Shirdi
+           ShirdiCarWale, Near Hotel Mathura, Shirdi.
           </p>
 
           <p className="flex flex-col md:flex-row justify-center items-center gap-1 md:gap-3">
             {/* <FaPhone className="text-yellow-400" />*/}
-            Call / WhatsApp: <span>1234567890</span>
+            Call / WhatsApp: <span>7743821515</span>
           </p>
 
           <p className="flex flex-col md:flex-row justify-center items-center gap-1 md:gap-3">
             {/* <FaEnvelope className="text-yellow-400" />*/}
-            Email: <span>ShirdiCarWale@gmail.com</span>
+            Email: <span>info@shirdicarwale.com</span>
           </p>
 
           <p className="flex flex-col md:flex-row justify-center items-center gap-1 md:gap-3">

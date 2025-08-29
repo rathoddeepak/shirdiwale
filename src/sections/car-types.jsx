@@ -7,10 +7,10 @@ const VehicleCards = () => {
   const vehicles = [
     {
       type: "hatchback",
-      title: "Hatchback",
+      title: "Hatchback (5-Seater)",
       subtitle: "Swift (CNG, DIESEL)",
       description:
-        "Compact and fuel-efficient cars perfect for city driving and short trips with good mileage.",
+        "Compact and budget-friendly cars perfect for city drives and short trips. Comfortable seating for 5 passengers, offering convenience and great mileage.",
       image: swiftCarImage,
       gradientFrom: "from-[#305D7E]",
       gradientTo: "to-black",
@@ -18,10 +18,10 @@ const VehicleCards = () => {
     },
     {
       type: "sedan",
-      title: "Sedan",
-      subtitle: "Dzire (CNG, DIESEL)",
+      title: "Sedan (5-Seater)",
+      subtitle: "Dzire (CNG, PETROL)",
       description:
-        "Spacious and comfortable sedans ideal for long distance travel with premium comfort features.",
+        "Stylish and comfortable cars ideal for family outings or business travel. Spacious interiors with seating for 5 passengers, ensuring a smooth and premium ride.",
       image: dzireCarImage,
       gradientFrom: "from-black",
       gradientTo: "to-[#7A5E30]",
@@ -29,10 +29,10 @@ const VehicleCards = () => {
     },
     {
       type: "suv",
-      title: "SUV",
+      title: "SUV (7–8 Seater)",
       subtitle: "Ertiga- (CNG, Diesel, Petrol)",
       description:
-        "Powerful SUVs perfect for family trips with spacious interiors and advanced safety features.",
+        "Spacious and versatile vehicles with seating for 7 to 8 passengers. Best suited for long journeys, group travel, and family vacations with ample comfort and luggage space.",
       image: taveraImage,
       gradientFrom: "from-[#463B76]",
       gradientTo: "to-black",
@@ -40,10 +40,10 @@ const VehicleCards = () => {
     },
     {
       type: "luxury",
-      title: "Luxury",
+      title: "SUV Luxury (7–8 Seater)",
       subtitle: "Innova Crysta (Diesel)",
       description:
-        "Premium luxury vehicles with top-tier amenities for special occasions and executive travel.",
+       "Premium luxury vehicles with top-tier amenities for special occasions and executive travel. Seating for 7 to 8 passengers with unmatched comfort, elegance, and space.",
       image: innovaImage,
       gradientFrom: "from-black",
       gradientTo: "to-[#794360]",

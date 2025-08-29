@@ -160,8 +160,8 @@ function MobilePricingCards() {
         name: "Hatchback",
         description: "Swift (CNG, DIESEL)",
         prices: {
-          "12hours": 999,
-          "24hours": 1299,
+          "12hours": "1499Rs",
+          "24hours": "2499Rs",
         },
       },
       {
@@ -170,8 +170,8 @@ function MobilePricingCards() {
         description: "Dzire (CNG, DIESEL)",
         recommended: true,
         prices: {
-          "12hours": 1199,
-          "24hours": 1799,
+          "12hours": "1699Rs",
+          "24hours": "2699Rs",
         },
       },
       {
@@ -179,8 +179,8 @@ function MobilePricingCards() {
         name: "SUV",
         description: "Ertiga- (CNG, Diesel, Petrol)",
         prices: {
-          "12hours": 1499,
-          "24hours": 2499,
+          "12hours": "1999Rs",
+          "24hours": "2999Rs",
         },
       },
       {
@@ -188,8 +188,8 @@ function MobilePricingCards() {
         name: "Luxury",
         description: "Innova Crysta (Diesel)",
         prices: {
-          "12hours": 1999,
-          "24hours": 2999,
+          "12hours": "2499Rs",
+          "24hours": "3499Rs",
         },
       },
     ],
