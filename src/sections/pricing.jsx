@@ -9,8 +9,8 @@ function Table() {
         name: "Hatchback",
         description: "Swift (CNG, DIESEL)",
         prices: {
-          "12hours": 999,
-          "24hours": 1299,
+          "12hours": 1499 ,
+          "24hours": 2499 ,
           unknown: 999,
         },
         features: {
@@ -24,8 +24,8 @@ function Table() {
         description: "Dzire (CNG, DIESEL)",
         recommended: true,
         prices: {
-          "12hours": 1199,
-          "24hours": 1799,
+          "12hours": 1699 ,
+          "24hours": 2699 ,
           unknown: 1199,
         },
         features: {
@@ -38,8 +38,8 @@ function Table() {
         name: "SUV",
         description: "Ertiga- (CNG, Diesel, Petrol)",
         prices: {
-          "12hours": 1499,
-          "24hours": 2499,
+          "12hours": 1999 ,
+          "24hours": 2999 ,
           unknown: 1499,
         },
         features: {
@@ -52,8 +52,8 @@ function Table() {
         name: "Luxury",
         description: "Innova Crysta (Diesel)",
         prices: {
-          "12hours": 1999,
-          "24hours": 2999,
+          "12hours": 2499 ,
+          "24hours": 3499 ,
           unknown: 1999,
         },
         features: {
@@ -82,7 +82,6 @@ function Table() {
           <p className="text-sm text-muted-foreground">
             All plans come with a 30-day satisfaction guarantee.
           </p>
-          <div className="w-8 h-0.5 bg-red-500 mt-4"></div>
         </div>
 
         {pricingData.durations.map((duration) => (
