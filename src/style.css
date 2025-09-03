@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
@@ -69,4 +73,8 @@ body {
     flex-direction: column;
     min-height: 100dvh;
     background-color: var(--color-background);
+}
+
+section {
+  scroll-margin-top: 100px; /* adjust this to your header height */
 }

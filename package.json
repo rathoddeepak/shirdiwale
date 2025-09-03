@@ -8,6 +8,8 @@
 	},
 	"dependencies": {
 		"@tailwindcss/vite": "^4.1.12",
+		"emailjs-com": "^3.2.0",
+		"framer-motion": "^12.23.12",
 		"preact": "^10.26.9",
 		"tailwindcss": "^4.1.12"
 	},
