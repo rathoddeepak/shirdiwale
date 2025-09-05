@@ -1,6 +1,9 @@
+import { useState } from "preact/hooks";
 import carWithMapImg from "../assets/car_with_map.png";
+import ContactModal from "./ContactModal";
 
 export const HeroSection = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const renderLeft = () => {
     return (
       <div className="text-white flex flex-col justify-center items-start w-full md:w-1/2 gap-y-4 md:gap-y-6">
@@ -31,7 +34,9 @@ export const HeroSection = () => {
         </p>
 
         {/* CTA Button */}
-        <button className="bg-white text-black px-6 md:px-8 py-2 md:py-[7px] rounded-sm text-sm md:text-base font-medium hover:bg-gray-100 transition-colors duration-200 flex items-center gap-2 group">
+        <button 
+        onClick={() => setIsModalOpen(true)}
+        className="bg-white text-black px-6 md:px-8 py-2 md:py-[7px] rounded-sm text-sm md:text-base font-medium hover:bg-gray-100 transition-colors duration-200 flex items-center gap-2 group">
           Get In Touch
           <svg
             className="w-4 h-4 md:w-5 md:h-5 transform group-hover:translate-x-1 transition-transform duration-200"
@@ -67,6 +72,8 @@ export const HeroSection = () => {
         {renderLeft()}
         {renderRight()}
       </div>
+      {/* Shared Contact Modal */}
+      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </>
   );
 };

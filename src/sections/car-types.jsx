@@ -1,12 +1,17 @@
+import { useState } from "react";
 import swiftCarImage from "../assets/swift-car.png";
 import dzireCarImage from "../assets/dzire.png";
 import taveraImage from "../assets/tavera.png";
 import innovaImage from "../assets/innova-car.png";
+import ContactModal from "./ContactModal";
 
 const VehicleCards = () => {
+  const [openDialog, setOpenDialog] = useState(false);
+  const [selectedCar, setSelectedCar] = useState("");
+
   const vehicles = [
     {
-      type: "hatchback",
+      type: "Hatchback",
       title: "Hatchback (5-Seater)",
       subtitle: "Swift (CNG, DIESEL)",
       description:
@@ -17,7 +22,7 @@ const VehicleCards = () => {
       borderColor: "border-[#0a2031]",
     },
     {
-      type: "sedan",
+      type: "Sedan",
       title: "Sedan (5-Seater)",
       subtitle: "Dzire (CNG, PETROL)",
       description:
@@ -28,7 +33,7 @@ const VehicleCards = () => {
       borderColor: "border-[#251c0e]",
     },
     {
-      type: "suv",
+      type: "SUV",
       title: "SUV (7–8 Seater)",
       subtitle: "Ertiga- (CNG, Diesel, Petrol)",
       description:
@@ -39,11 +44,11 @@ const VehicleCards = () => {
       borderColor: "border-[#181427]",
     },
     {
-      type: "luxury",
+      type: "Luxury",
       title: "SUV Luxury (7–8 Seater)",
       subtitle: "Innova Crysta (Diesel)",
       description:
-       "Premium luxury vehicles with top-tier amenities for special occasions and executive travel. Seating for 7 to 8 passengers with unmatched comfort, elegance, and space.",
+        "Premium luxury vehicles with top-tier amenities for special occasions and executive travel. Seating for 7 to 8 passengers with unmatched comfort, elegance, and space.",
       image: innovaImage,
       gradientFrom: "from-black",
       gradientTo: "to-[#794360]",
@@ -51,56 +56,72 @@ const VehicleCards = () => {
     },
   ];
 
-  return (
-    <div className="grid grid-cols-1 gap-8 mt-12">
-      {vehicles.map((vehicle, index) => (
-        <div
-          key={vehicle.type}
-          className={`
-            rounded-3xl border ${vehicle.borderColor}
-            bg-gradient-to-r ${vehicle.gradientFrom} ${vehicle.gradientTo}
-            p-6 md:p-9 flex flex-col md:flex-row items-center gap-6 md:gap-10
-            cursor-pointer transition-all duration-300 ease-in-out
-            hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/40
-            min-h-[200px]
-          `}
-        >
-          {/* Vehicle Image Container */}
-          <div className="w-[200px] md:w-[24%] h-24 md:h-30 flex items-center justify-center flex-shrink-0">
-            <img
-              src={vehicle.image}
-              alt={vehicle.title}
-              className="w-full h-auto drop-shadow-xl"
-            />
-          </div>
+  const handleCardClick = (carType) => {
+    setSelectedCar(carType);
+    setOpenDialog(true);
+  };
 
-          {/* Vehicle Info */}
-          <div className="w-full md:w-[30%] items-center md:items-start flex flex-col">
-            {/* Header */}
-            <div className="flex justify-between items-start mb-4">
-              <div className="vehicle-type">
-                <h3 className="text-white font-bold text-base md:text-lg tracking-widest uppercase mb-1 drop-shadow-lg text-center md:text-left">
-                  {vehicle.title}
-                </h3>
-                <h4 className="text-white/75 text-sm md:text-base font-normal text-center md:text-left">
-                  {vehicle.subtitle}
-                </h4>
+  return (
+    <>
+      <div className="grid grid-cols-1 gap-8 mt-12">
+        {vehicles.map((vehicle) => (
+          <div
+            key={vehicle.type}
+            onClick={() => handleCardClick(vehicle.type)} // pass title or type
+            className={`
+              rounded-3xl border ${vehicle.borderColor}
+              bg-gradient-to-r ${vehicle.gradientFrom} ${vehicle.gradientTo}
+              p-6 md:p-9 flex flex-col md:flex-row items-center gap-6 md:gap-10
+              cursor-pointer transition-all duration-300 ease-in-out
+              hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/40
+              min-h-[200px]
+            `}
+          >
+            {/* Vehicle Image */}
+            <div className="w-[200px] md:w-[24%] h-24 md:h-30 flex items-center justify-center flex-shrink-0">
+              <img
+                src={vehicle.image}
+                alt={vehicle.title}
+                className="w-full h-auto drop-shadow-xl"
+              />
+            </div>
+
+            {/* Vehicle Info */}
+            <div className="w-full md:w-[30%] items-center md:items-start flex flex-col">
+              <div className="flex justify-between items-start mb-4">
+                <div className="vehicle-type">
+                  <h3 className="text-white font-bold text-base md:text-lg tracking-widest uppercase mb-1 drop-shadow-lg text-center md:text-left">
+                    {vehicle.title}
+                  </h3>
+                  <h4 className="text-white/75 text-sm md:text-base font-normal text-center md:text-left">
+                    {vehicle.subtitle}
+                  </h4>
+                </div>
+              </div>
+            </div>
+
+            {/* Description */}
+            <div className="flex-grow flex flex-col w-full md:w-[30%]">
+              <div className="text-white font-semibold text-base md:text-lg drop-shadow-lg text-center md:text-left">
+                Description
+              </div>
+              <div className="text-white/75 text-sm md:text-base leading-relaxed font-normal text-center md:text-left">
+                {vehicle.description}
               </div>
             </div>
           </div>
+        ))}
+      </div>
 
-          {/* Description */}
-          <div className="flex-grow flex flex-col w-full md:w-[30%]">
-            <div className="text-white font-semibold text-base md:text-lg drop-shadow-lg text-center md:text-left">
-              Description
-            </div>
-            <div className="text-white/75 text-sm md:text-base leading-relaxed font-normal text-center md:text-left">
-              {vehicle.description}
-            </div>
-          </div>
-        </div>
-      ))}
-    </div>
+      {/* Contact Dialog */}
+      {openDialog && (
+        <ContactModal
+          isOpen={openDialog}
+          onClose={() => setOpenDialog(false)}
+          selectedCar={selectedCar}
+        />
+      )}
+    </>
   );
 };
 

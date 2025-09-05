@@ -19,11 +19,11 @@ export const Header = () => {
   return (
     <>
       <nav className="flex justify-between items-center p-[4px] backdrop-blur-sm fixed top-4 md:top-8 w-11/12 md:w-4/5 self-center z-50 rounded-full border border-border bg-[#121212]">
-                <img
+                <a href="#hero" className="ml-4"><img
   src={appLogo}   // your image path
   alt="Shirdi Wale"
   className="ml-4 h-7 md:h-8 object-contain"
-/>
+/></a>
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">
           {navLinks.map((link) => (
@@ -39,7 +39,7 @@ export const Header = () => {
 
         {/* Desktop Contact Button */}
         <MovingBorderCover className="hidden md:block rounded-full px-6 py-2">
-          Contact us
+          <a href="#contact">Contact us</a>
         </MovingBorderCover>
 
         {/* Mobile Menu Button */}
@@ -85,8 +85,14 @@ export const Header = () => {
               </a>
             ))}
             <MovingBorderCover className="rounded-full px-6 py-2 text-center">
-              Contact us
-            </MovingBorderCover>
+  <a
+    href="#contact"
+    onClick={() => setIsMenuOpen(false)}  // closes mobile menu after click
+    className="block w-full"
+  >
+    Contact us
+  </a>
+</MovingBorderCover>
           </div>
         </div>
       )}

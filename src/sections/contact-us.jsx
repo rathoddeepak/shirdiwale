@@ -34,18 +34,53 @@ export function ContactUs() {
         </div>
       </div>
       <div className="flex self-center justify-center gap-4 md:gap-6 mt-6 md:mt-8 text-gray-200">
-        <a href="#">
-          <img src={instagramImage} className="w-6 h-6 md:w-8 md:h-8" alt="Instagram" />
-        </a>
-        <a href="#">
-          <img src={facebookImage} className="w-6 h-6 md:w-8 md:h-8" alt="Facebook" />
-        </a>
-        <a href="#">
-          <img src={youtubeImage} className="w-6 h-6 md:w-8 md:h-8" alt="YouTube" />
-        </a>
-        <a href="#">
-          <img src={whatsappImage} className="w-6 h-6 md:w-8 md:h-8" alt="WhatsApp" />
-        </a>
+       <a
+  href="https://www.instagram.com/vintagecarscollector"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <img
+    src={instagramImage}
+    className="w-6 h-6 md:w-8 md:h-8"
+    alt="Instagram"
+  />
+</a>
+
+<a
+  href="https://www.facebook.com/groups/2477475798956176/"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <img
+    src={facebookImage}
+    className="w-6 h-6 md:w-8 md:h-8"
+    alt="Facebook"
+  />
+</a>
+
+<a
+  href="https://www.youtube.com/channel/UChDX4wagpTQS0aTm4eyhJaw"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <img
+    src={youtubeImage}
+    className="w-6 h-6 md:w-8 md:h-8"
+    alt="YouTube"
+  />
+</a>
+
+<a
+  href="https://wa.me/917743821515"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <img
+    src={whatsappImage}
+    className="w-6 h-6 md:w-8 md:h-8"
+    alt="WhatsApp"
+  />
+</a>
       </div>
     </div>
   );
