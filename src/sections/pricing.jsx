@@ -9,8 +9,8 @@ function Table() {
         name: "Hatchback",
         description: "Swift (CNG, DIESEL)",
         prices: {
-          "12hours": 999,
-          "24hours": 1299,
+          "12hours": 1499 ,
+          "24hours": 2499 ,
           unknown: 999,
         },
         features: {
@@ -24,8 +24,8 @@ function Table() {
         description: "Dzire (CNG, DIESEL)",
         recommended: true,
         prices: {
-          "12hours": 1199,
-          "24hours": 1799,
+          "12hours": 1699 ,
+          "24hours": 2699 ,
           unknown: 1199,
         },
         features: {
@@ -38,8 +38,8 @@ function Table() {
         name: "SUV",
         description: "Ertiga- (CNG, Diesel, Petrol)",
         prices: {
-          "12hours": 1499,
-          "24hours": 2499,
+          "12hours": 1999 ,
+          "24hours": 2999 ,
           unknown: 1499,
         },
         features: {
@@ -52,8 +52,8 @@ function Table() {
         name: "Luxury",
         description: "Innova Crysta (Diesel)",
         prices: {
-          "12hours": 1999,
-          "24hours": 2999,
+          "12hours": 2499 ,
+          "24hours": 3499 ,
           unknown: 1999,
         },
         features: {
@@ -63,13 +63,13 @@ function Table() {
       },
     ],
     features: [
-      { id: "categories", name: "All classes across 11 categories" },
-      { id: "allClasses", name: "All classes across 11 categories" },
+      // { id: "categories", name: "All classes across 11 categories" },
+      // { id: "allClasses", name: "All classes across 11 categories" },
     ],
     durations: [
       { id: "12hours", name: "12 Hours Plan" },
       { id: "24hours", name: "24 Hours Plan" },
-      { id: "unknown", name: "Unknown" },
+      // { id: "unknown", name: "Unknown" },
     ],
   });
 
@@ -79,10 +79,9 @@ function Table() {
       <div>
         <div className="p-6 h-36 border-b border-border">
           <h3 className="text-xl font-semibold mb-2">Choose plan</h3>
-          <p className="text-sm text-muted-foreground">
+          {/* <p className="text-sm text-muted-foreground">
             All plans come with a 30-day satisfaction guarantee.
-          </p>
-          <div className="w-8 h-0.5 bg-red-500 mt-4"></div>
+          </p> */}
         </div>
 
         {pricingData.durations.map((duration) => (
@@ -160,8 +159,8 @@ function MobilePricingCards() {
         name: "Hatchback",
         description: "Swift (CNG, DIESEL)",
         prices: {
-          "12hours": "1499Rs",
-          "24hours": "2499Rs",
+          "12hours": "1499",
+          "24hours": "2499",
         },
       },
       {
@@ -170,8 +169,8 @@ function MobilePricingCards() {
         description: "Dzire (CNG, DIESEL)",
         recommended: true,
         prices: {
-          "12hours": "1699Rs",
-          "24hours": "2699Rs",
+          "12hours": "1699",
+          "24hours": "2699",
         },
       },
       {
@@ -179,8 +178,8 @@ function MobilePricingCards() {
         name: "SUV",
         description: "Ertiga- (CNG, Diesel, Petrol)",
         prices: {
-          "12hours": "1999Rs",
-          "24hours": "2999Rs",
+          "12hours": "1999",
+          "24hours": "2999",
         },
       },
       {
@@ -188,8 +187,8 @@ function MobilePricingCards() {
         name: "Luxury",
         description: "Innova Crysta (Diesel)",
         prices: {
-          "12hours": "2499Rs",
-          "24hours": "3499Rs",
+          "12hours": "2499",
+          "24hours": "3499",
         },
       },
     ],
@@ -223,12 +222,12 @@ function MobilePricingCards() {
             </div>
           </div>
           
-          <div className="mt-4 pt-4 border-t border-border space-y-2">
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <span className="text-green-500">✓</span>
-              <span>All classes across 11 categories</span>
-            </div>
-          </div>
+          {/* <div className="mt-4 pt-4 border-t border-border space-y-2"> */}
+            {/* <div className="flex items-center gap-2 text-sm text-muted-foreground"> */}
+              {/* <span className="text-green-500">✓</span> */}
+              {/* <span>All classes across 11 categories</span> */}
+            {/* </div> */}
+          {/* </div> */}
         </div>
       ))}
     </div>
@@ -239,11 +238,11 @@ export const Pricing = () => {
   return (
     <div className="w-full px-6 md:w-4/5 flex flex-col self-center items-center">
       <div className="text-center space-y-4 mb-10">
-        <div className="bg-gradient-to-r from-muted-foreground to-[#505050] bg-clip-text text-transparent font-semibold text-3xl md:text-5xl">
+        <div className="bg-gradient-to-r from-muted-foreground to-[#505050] bg-clip-text text-transparent font-semibold text-4xl md:text-5xl">
           Pricing
         </div>
         <div className="text-sm md:text-base text-muted-foreground">
-          Starting at just ₹999 for 12 Hrs!
+          Starting at just ₹1499 for 12 Hrs!
         </div>
       </div>
       <Table />

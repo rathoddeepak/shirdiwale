@@ -14,7 +14,7 @@ export function ContactUs() {
         <div className="space-y-3 md:space-y-2 mt-4 text-gray-300 text-sm md:text-base">
           <p className="flex flex-col md:flex-row justify-center items-center gap-1 md:gap-3">
             {/* <FaMapMarkerAlt className="text-yellow-400" />*/}
-           ShirdiCarWale, Near Hotel Mathura, Shirdi.
+           ShirdiCarWale, Opp. Shri Sai Baba temple, Near Hotel Mathura, Shirdi.
           </p>
 
           <p className="flex flex-col md:flex-row justify-center items-center gap-1 md:gap-3">
